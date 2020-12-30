@@ -11,3 +11,10 @@ docker-compose exec kafka  \
 
 docker-compose exec kafka  \
   kafka-console-consumer --bootstrap-server kafka:9092 --topic ofertas --from-beginning --max-messages 100
+
+
+
+# Broadway
+
+https://github.com/dashbitco/broadway
+https://hexdocs.pm/broadway/Broadway.html
