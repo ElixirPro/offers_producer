@@ -1,4 +1,4 @@
-
+https://www.youtube.com/watch?v=M4mHkuQ0mqQ
 
 docker-compose exec kafka  \
 kafka-topics --create --topic ofertas --partitions 3 --replication-factor 1 --if-not-exists --zookeeper zookeeper:2181
