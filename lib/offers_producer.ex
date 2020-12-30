@@ -1,18 +1,19 @@
 defmodule OffersProducer do
-  @moduledoc """
-  Documentation for `OffersProducer`.
-  """
+  @topic "ofertas"
 
-  @doc """
-  Hello world.
+  def execute do
+    client_id = :my_client
+    hosts = [localhost: 9092]
 
-  ## Examples
+    payload = %{test: 123}
 
-      iex> OffersProducer.hello()
-      :world
+    :ok = :brod.start_client(hosts, client_id)
+    :ok = :brod.start_producer(client_id, @topic, [])
 
-  """
-  def hello do
-    :world
+    payload_json =
+      payload
+      |> Jason.encode!()
+
+    :brod.produce(client_id, @topic, 0, _key = "", payload_json)
   end
 end

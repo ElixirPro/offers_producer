@@ -18,3 +18,4 @@ docker-compose exec kafka  \
 
 https://github.com/dashbitco/broadway
 https://hexdocs.pm/broadway/Broadway.html
+https://hexdocs.pm/broadway/apache-kafka.html
