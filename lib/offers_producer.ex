@@ -1,6 +1,7 @@
 defmodule OffersProducer do
   @topic "ofertas"
 
+  @spec executed :: {:error, any} | {:ok, {:brod_call_ref, pid, :undefined | pid, reference}}
   def executed,
     do:
       %{name: "Playstation", discount: 50, price: 1000}
