@@ -3,12 +3,12 @@ defmodule OffersProducer do
 
   def executed,
     do:
-      %{test: 123, discount: 50}
+      %{name: "Playstation", discount: 50, price: 1000}
       |> send_msg
 
   def execute,
     do:
-      %{test: 123, discount: 30}
+      %{name: "XboX", discount: 30, price: 1000}
       |> send_msg
 
   def send_msg(payload) do
